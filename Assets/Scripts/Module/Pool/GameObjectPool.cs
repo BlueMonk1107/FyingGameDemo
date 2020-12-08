@@ -37,7 +37,7 @@ public class GameObjectPool
         while (true)
         {
             await Task.Delay(TimeSpan.FromSeconds(1));
-            var spendTime = (_spawnTime - DateTime.Now).Seconds;
+            var spendTime = (DateTime.Now - _spawnTime ).Seconds;
             if (spendTime >= _useFrequency && !_isDestroying)
             {
                 _isDestroying = true;
